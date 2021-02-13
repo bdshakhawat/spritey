@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .area {
+  border: 2px solid red;
+  height: 220px;
+  margin: 20px 0;
+  position: relative;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/star.png) no-repeat;
+  background-size: 100px 100px;
+  animation: bg-pos-move 3s infinite alternate linear;
+}
+.area2 {
+  animation: bg-pos-move 3s steps(4) infinite alternate;
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 2px;
+  background: green;
+  animation: line-move 3s infinite alternate linear;
+}
+.line2 {
+  animation: line-move 3s steps(4, end) infinite alternate;
+}
+
+.img {
+  position: absolute;
+  opacity: 0.5;
+  width: 100px;
+  bottom: 0;
+  left: 0;
+  animation: img-move 3s infinite alternate linear;
+}
+.img2 {
+  animation: img-move 3s steps(4) infinite alternate;
+}
+
+@keyframes bg-pos-move {
+  100% { background-position: 100% 0; }
+}
+@keyframes img-move {
+  100% { left: 100%; }
+}
+@keyframes line-move {
+  100% { left: 100%; }
+}
+
+body {
+  padding: 0 120px;
+}
+    </style>
+</head>
+<body>
+    <div class="area">
+        <div class="line"></div>
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/star.png" alt="" class="img" />
+      </div>
+      
+      <div class="area area2">
+        <div class="line line2"></div>
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/star.png" alt="" class="img img2" />
+      </div>
+    
+</body>
+</html>

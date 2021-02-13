@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import "compass/css3";
+
+.background-origin {
+  box-sizing: border-box;
+  height: 300px;
+  width: 300px;
+  background: url('http://lorempixel.com/300/300/cats') no-repeat;
+  border: 16px solid rgba(23,23,23,0.5);
+  background-origin: border-box;
+  background-size: cover;
+  padding: 16px;
+  margin: 0 auto;
+}
+
+
+.inputs {
+  text-align: center;
+  margin: 16px;
+  label {
+    cursor: pointer;
+    padding: 12px 0;
+  }
+  input {
+    cursor: pointer;
+    margin-left: 12px;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <div class="inputs">
+        <input id="border-box" checked name="box_selectors" type="radio"/>
+        <label for="border-box">border-box</label>
+        <input id="padding-box" name="box_selectors" type="radio"/>
+        <label for="padding-box">padding-box</label>
+        <input id="content-box" name="box_selectors" type="radio"/> 
+        <label for="content-box">content-box</label> 
+      </div>
+      
+      <div class="background-origin"></div>
+
+    <script>
+        @import "compass/css3";
+
+.background-origin {
+  box-sizing: border-box;
+  height: 300px;
+  width: 300px;
+  background: url('http://lorempixel.com/300/300/cats') no-repeat;
+  border: 16px solid rgba(23,23,23,0.5);
+  background-origin: border-box;
+  background-size: cover;
+  padding: 16px;
+  margin: 0 auto;
+}
+
+
+.inputs {
+  text-align: center;
+  margin: 16px;
+  label {
+    cursor: pointer;
+    padding: 12px 0;
+  }
+  input {
+    cursor: pointer;
+    margin-left: 12px;
+  }
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div { 
+        background-color: yellow;
+        width: 225px;
+        padding: 1em 0;
+        border: 5px solid rgba(156, 224, 251, .5);
+        }
+
+        .nomargin { margin: 0; }
+
+        #border-box { background-clip: border-box; }
+
+        #padding-box { background-clip: padding-box; }
+
+        #content-box { background-clip: content-box; }
+
+        /* styling for the Pen, unrelated to background-clip */
+
+        body { font-family: sans-serif; }
+
+        div { margin-bottom: 2em; }
+
+    </style>
+</head>
+<body>
+    <h2>background-clip: border-box;</h2>
+    <div id="border-box">
+    <p>This paragraph is the content.</p>
+    </div>
+
+    <h2>background-clip: padding-box;</h2>
+    <div id="padding-box">
+    <p>This paragraph is the content.</p>
+    </div>
+
+    <h2>background-clip: content-box;</h2>
+    <h3>browser default paragraph margins</h3>
+    <div id="content-box">
+    <p>This paragraph is the content.</p>
+    </div>
+
+    <h2>background-clip: content-box;</h2>
+    <h3>paragraph is set to margin: 0;</h3>
+    <div id="content-box">
+    <p class="nomargin">This paragraph is the content.</p>
+    </div>
+
+    
+</body>
+<!-- background-clip lets you control how far a background image or color extends beyond an element’s padding or content.
+    Values
+border-box is the default value. This allows the background to extend all the way to the outside edge of the element’s border.
+padding-box clips the background at the outside edge of the element’s padding and does not let it extend into the border.
+content-boxclips the background at the edge of the content box.
+inherit applies the background-clip setting of the parent to the selected element.
+Demos
+background-clip is best explained in action, so we’ve put together two demos to show how it works.
+
+In the first demo, each div has one paragraph inside it. The paragraph is the div’s content. Each div has a yellow background and a 5 pixel, semi-transparent light blue border.
+By default, or with background-clip: border-box set, the yellow background extends all the way to the outside edge of the border. Notice how the border looks like it’s green because of the yellow background beneath it.
+
+When the background-clip is changed to padding-box, the background color stops where the element’s padding ends. Notice that the border is blue because the background isn’t allowed to bleed into the border.
+
+With background-clip: content-box, the background color only applies itself to the div’s content, in this case the single paragraph element. The div’s padding and border don’t have a background color. But, there’s one little detail worth mentioning: the color does extend into the content’s margin. Check out the differences between the first and second examples with content-box.
+
+In the first content-box example, the browser’s default margins are applied to the paragraph, and the background clips after the margin. In the second example, the margin is set to 0 in the CSS, and the background is clipped at the edge of the text.
+
+This next interactive shows background-clip with a background image. The content in this demo is a smaller empty div.
+This demo also applies background-size: cover and background-repeat: no-repeat in addition to background-clip to control the background image, which would otherwise repeat until clipping.
+
+Text
+There is a vendor-prefixed version of this that works for clipping a background to text. In order to see that work, the text will also need to be transparent. Fortunately, there is another vendor-prefixed text color property that can effectively override color, making it safe to use as it can have a fallback:
+
+
+-->
+</html>
